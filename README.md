@@ -1,2 +1,14 @@
-# Server-farm-simulator
-A discrete event simulator written in C++
+# Server Farm Simulator (SFS)
+
+## 1. Definition
+
+SFS is a discrete event simulator written in C++ designed to simulate the behaviour of a large number of servers. It allows to evaluare the performance of different orchestration strategies, e.g., reliability, latency, power consumption, etc. SFS also enables the possibility of simulating several scenarios in terms of topologies, guaranteeing high-scalability and heterogeneity. 
+
+## 2. SFS Architecture
+The architecture is composed by S servers with M capacity per server. Each server is switched on/off depending on a threshold level (based on the load). 
+There are tasks arriving to the system which need to be served by the servers. To handle these tasks, a subset of the $S$ servers is running, while the remaining servers are in one of the available sleep modes to save power, and can be activated on when needed. More specifically, each server can be in one of the following states: ($i$)~running (i.e., active), a state in which it can serve tasks; ($ii$)~in a low-power sleep mode; ($iii$)~switching from a sleep mode to the active mode (or vice versa), when the infrastructure manager decides that more (less) resources are needed; or ($iv$)~booting-up, after a server crash (we assume that a server can always restart after a crash). The infrastructure manager decides the number of servers that should be active at a given point in time as well as the low-power sleep mode employed. Since there is a clear trade-off between the power consumption and the delay to switch between a low-power state into the active state, selecting the proper sleep state in NFV is crucial for the system performance.
+
+## 3. SFS features
+
+
+
