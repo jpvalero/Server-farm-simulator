@@ -11,6 +11,12 @@ There are tasks arriving to the system which need to be served by the servers. T
 ## 3. SFS Features
 
 ## 4. Folder Structure
-
+.
+├── src                               # Source code folder
+│   ├── defines.h                     # File to describe all the variables of the simulator 
+│   ├── functions.cpp                 # File to describe the functionality of all the functions used in the simulator
+│   ├── functions.h                   # File to define the functions
+│   ├── main.cpp                      # File to run the simulations 
+│   └── script.py                     # File to automate a large number of simulations with differents parameters
 
 
